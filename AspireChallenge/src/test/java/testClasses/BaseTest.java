@@ -33,7 +33,6 @@ public class BaseTest {
 	@BeforeSuite
 	public void beforeSuite() {
 		browserAction = new BrowserActions(driver);
-
 	}
 
 	@AfterSuite
