@@ -53,6 +53,12 @@ public class LandingPageObjects {
 	
 
 	public void NavToInventory() {
+		try {
+			browserAction.waitForElement(inventoryLink);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		browserAction.click(inventoryLink);
 	}
 

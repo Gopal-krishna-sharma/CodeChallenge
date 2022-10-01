@@ -95,6 +95,12 @@ public class InventoryPageObjects {
 	
 	public void NavToProduct() {
 		browserAction.click(ProductsMenuBtn);
+		try {
+			browserAction.waitForElement(ProductsLink);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		browserAction.click(ProductsLink);
 	}
 
@@ -103,6 +109,12 @@ public class InventoryPageObjects {
 	//Method - To create a product 
 	
 	public void CreateProduct() {
+		try {
+			browserAction.waitForElement(CreateBtn);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		browserAction.click(CreateBtn);
 		browserAction.setText(ProductNameInput, "CheeseBurger1100");
 		browserAction.click(SaveBtn);

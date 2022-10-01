@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.28 s - in TestSuite
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.578 s <<< FAILURE! - in TestSuite
+testClasses.TestClass.NavToInventory  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+	at testClasses.TestClass.NavToInventory(TestClass.java:26)
+
+testClasses.TestClass.NavToManufacturing  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+	at testClasses.TestClass.NavToManufacturing(TestClass.java:42)
+

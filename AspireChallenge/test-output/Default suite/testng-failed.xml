@@ -3,19 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Odoo.TestClass">
+      <class name="testClasses.TestClass">
         <methods>
-          <include name="afterMethod"/>
           <include name="beforeTest"/>
-          <include name="AppLogin"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
-          <include name="CreateProduct"/>
           <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="CreateManufacturingOrder"/>
+          <include name="NavToManufacturing"/>
+          <include name="NavToInventory"/>
         </methods>
-      </class> <!-- com.Odoo.TestClass -->
+      </class> <!-- testClasses.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
