@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-01T15:22:24 IST" name="Aspire Code Challenge" finished-at="2022-10-01T15:22:29 IST" duration-ms="5029">
+    <groups>
+    </groups>
+    <test started-at="2022-10-01T15:22:24 IST" name="Login" finished-at="2022-10-01T15:22:29 IST" duration-ms="5029">
+      <class name="testClasses.TestClass">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:24 IST" name="beforeSuite" finished-at="2022-10-01T15:22:24 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:24 IST" name="beforeTest" finished-at="2022-10-01T15:22:28 IST" duration-ms="4710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:28 IST" name="beforeMethod" finished-at="2022-10-01T15:22:28 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testClasses.TestClass.AppLogin() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="AppLogin()[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:28 IST" name="AppLogin" finished-at="2022-10-01T15:22:28 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppLogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:28 IST" name="afterMethod" finished-at="2022-10-01T15:22:28 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AppLogin status=SUCCESS method=TestClass.AppLogin()[pri:0, instance:testClasses.TestClass@4007f65e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:28 IST" name="afterTest" finished-at="2022-10-01T15:22:29 IST" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testClasses.TestClass@4007f65e]" started-at="2022-10-01T15:22:29 IST" name="afterSuite" finished-at="2022-10-01T15:22:29 IST" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testClasses.TestClass -->
+    </test> <!-- Login -->
+  </suite> <!-- Aspire Code Challenge -->
+</testng-results>

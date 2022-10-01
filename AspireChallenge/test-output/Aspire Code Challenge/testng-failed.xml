@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Aspire Code Challenge]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="com.Odoo.TestClass">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="AppLogin"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="CreateProduct"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+          <include name="CreateManufacturingOrder"/>
+        </methods>
+      </class> <!-- com.Odoo.TestClass -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Aspire Code Challenge] -->
