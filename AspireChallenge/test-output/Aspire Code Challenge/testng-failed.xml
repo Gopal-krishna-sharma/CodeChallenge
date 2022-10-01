@@ -8,6 +8,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="AppLogin"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="afterMethod"/>

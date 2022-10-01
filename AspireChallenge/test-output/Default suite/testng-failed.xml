@@ -5,8 +5,11 @@
     <classes>
       <class name="testClasses.TestClass">
         <methods>
+          <include name="CreateManufacturingOrder"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="CreateProduct"/>
+          <include name="AppLogin"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="afterMethod"/>

@@ -10,16 +10,16 @@ import utils.BrowserActions;
 public class LandingPageObjects {
 
 	WebDriver driver = null;
-
 	BrowserActions browserAction = null;
 
 	/**
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Constructor - Initialize driver 
+	 * Constructor - Initialize driver
 	 * 
 	 * @param driver - WebDriver object
 	 * 
-	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *               * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *               * * * * * *
 	 */
 
 	public LandingPageObjects(WebDriver driver) {
@@ -27,8 +27,8 @@ public class LandingPageObjects {
 		this.driver = driver;
 
 		PageFactory.initElements(driver, this);
-
-		}
+		browserAction = new BrowserActions(driver);
+	}
 
 	/**
 	 * *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
@@ -41,7 +41,7 @@ public class LandingPageObjects {
 	@FindBy(how = How.XPATH, using = "*//a/div[text()='Inventory']")
 	private WebElement inventoryLink;
 
-	// Manufacturing link 
+	// Manufacturing link
 
 	@FindBy(how = How.XPATH, using = "*//a/div[text()='Manufacturing']")
 	private WebElement manufacturingLink;
@@ -50,21 +50,21 @@ public class LandingPageObjects {
 
 	@FindBy(how = How.XPATH, using = "*//a/div[text()='Discuss']")
 	private WebElement discussLink;
-	
+
+	// Navigation to Inventory section
 
 	public void NavToInventory() {
-		try {
-			browserAction.waitForElement(inventoryLink);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		browserAction.click(inventoryLink);
 	}
+
+	// Navigation to manufacturing section
 
 	public void NavToManufacturing() {
 		browserAction.click(manufacturingLink);
 	}
+
+	// Navigation to Discussion section
 
 	public void NavToDiscuss() {
 		browserAction.click(discussLink);

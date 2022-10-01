@@ -44,6 +44,7 @@ public class BrowserActions {
 	public void click(WebElement element) {
 
 		try {
+		
 			element.click();
 		} catch (Exception e) {
 

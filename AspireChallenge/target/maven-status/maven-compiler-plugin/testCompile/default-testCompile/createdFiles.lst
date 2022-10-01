@@ -1,0 +1,7 @@
+testClasses\TestClass.class
+pageObjects\InventoryPageObjects.class
+pageObjects\ManufacturingPageObjects.class
+utils\BrowserActions.class
+testClasses\BaseTest.class
+pageObjects\LoginPageObjects.class
+pageObjects\LandingPageObjects.class

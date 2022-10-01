@@ -2,6 +2,8 @@ package testClasses;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -19,7 +21,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import pageObjects.LoginPageObjects;
 import utils.BrowserActions;
 
-
 public class BaseTest {
 
 	public static WebDriver driver = null;
@@ -28,23 +29,24 @@ public class BaseTest {
 	public ExtentTest logger;
 	BrowserActions browserAction;
 	LoginPageObjects LoginPgObj;
-	
 
 	@BeforeSuite
-	public void beforeSuite() 
-	{
-		browserAction 	= new BrowserActions(driver);
-	
+	public void beforeSuite() {
+		browserAction = new BrowserActions(driver);
+
 	}
 
 	@AfterSuite
 	public void afterSuite() {
 		driver.quit();
+		driver.close();
+
 	}
 
 	@BeforeMethod
 	public void beforeMethod(Method testMethod) {
 		logger = extentReport.createTest(testMethod.getName());
+		System.out.println("Test name: " + testMethod.getName());
 
 	}
 
@@ -85,6 +87,7 @@ public class BaseTest {
 					System.getProperty("user.dir") + File.separator + "Drivers" + File.separator + "chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.get("https://codechallenge.odoo.com/");
 		}
 

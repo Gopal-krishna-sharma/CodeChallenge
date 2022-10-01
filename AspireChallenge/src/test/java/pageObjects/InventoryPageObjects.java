@@ -16,11 +16,11 @@ public class InventoryPageObjects {
 
 	/**
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Constructor - Initialize driver 
+	 * Constructor - Initialize driver
 	 * 
 	 * @param driver - WebDriver object
 	 * 
-	 * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *               * * * * * * * * * * * * * * * * * * * * * * * *
 	 */
 
 	public InventoryPageObjects(WebDriver driver) {
@@ -54,9 +54,8 @@ public class InventoryPageObjects {
 	@FindBy(how = How.CSS, using = "button[title='Create record']")
 	private WebElement CreateBtn;
 
+	// Product name input field
 
-	//Product name input field
-	
 	@FindBy(how = How.CSS, using = "input[name='name']")
 	private WebElement ProductNameInput;
 
@@ -76,23 +75,22 @@ public class InventoryPageObjects {
 	private WebElement CreateQtyBtn;
 
 	// Quantity input
-	
+
 	@FindBy(how = How.CSS, using = "input[name='inventory_quantity']")
 	private WebElement CountedQtyUpdate;
-	
+
 	// Save quantity button
 
 	@FindBy(how = How.CSS, using = "button[title='Save record']")
 	private WebElement SaveQtyBtn;
 
 	// Navigation link for landing page
-	
+
 	@FindBy(how = How.CSS, using = "header nav a[title='Home menu']")
 	private WebElement NavToLandingLink;
-	
-	
-	//Method - To navigate to Product creation page
-	
+
+	// Method - To navigate to Product creation page
+
 	public void NavToProduct() {
 		browserAction.click(ProductsMenuBtn);
 		try {
@@ -105,33 +103,30 @@ public class InventoryPageObjects {
 	}
 
 //******************************************************************************************************************
-	
-	//Method - To create a product 
-	
+
+	// Method - To create a product
+
 	public void CreateProduct() {
-		try {
-			browserAction.waitForElement(CreateBtn);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		browserAction.click(CreateBtn);
 		browserAction.setText(ProductNameInput, "CheeseBurger1100");
 		browserAction.click(SaveBtn);
 	}
 
-	//Method - To update Product quantity 
-	
+	// Method - To update Product quantity
+
 	public void UpdateProductQty() {
+		
 		browserAction.click(UpdQtyLink);
 		browserAction.click(CreateQtyBtn);
 		browserAction.setText(CountedQtyUpdate, "11");
 		browserAction.click(SaveQtyBtn);
 	}
-	
-	//Method - To navigate to landing page
-	
+
+	// Method - To navigate to landing page
+
 	public void NavigationToLandingPage() {
+		
 		browserAction.click(NavToLandingLink);
 	}
 }

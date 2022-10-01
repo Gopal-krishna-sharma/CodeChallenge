@@ -61,6 +61,8 @@ public class LoginPageObjects {
 
 			browserAction.click(loginBtn);
 			
+			browserAction.WaittoPageLoad();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
